@@ -119,7 +119,7 @@ let baseMaps = {
 let map = L.map('mapid', {
   center: [43.7, -79.3],
   zoom: 11,
-  layers: [light]
+  layers: [streets]
 })
 
 // Pass our map layers into our layers control and add the layers control to the map.
@@ -130,7 +130,10 @@ L.control.layers(baseMaps).addTo(map);
 // let airportData = "https://raw.githubusercontent.com/Akshaya-Kamble/Mapping_Earthquakes/main/Module/majorAirports.json";  
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoData ="https://raw.githubusercontent.com/Akshaya-Kamble/Mapping_Earthquakes/main/Module/torontoRoutes.json";
+// let torontoData ="https://raw.githubusercontent.com/Akshaya-Kamble/Mapping_Earthquakes/main/Module/torontoRoutes.json";
+
+// Accessing the Toronto neighborhood GeoJSON URL
+let torontoHoods = "https://raw.githubusercontent.com/Akshaya-Kamble/Mapping_Earthquakes/main/Module/torontoNeighborhoods.json ";
 
 // Create a style for the lines.
 let myStyle = {
@@ -139,7 +142,7 @@ let myStyle = {
 }
 
 // Grabbing our GeoJSON data.
-d3.json(torontoData).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
   console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJson(data,{
