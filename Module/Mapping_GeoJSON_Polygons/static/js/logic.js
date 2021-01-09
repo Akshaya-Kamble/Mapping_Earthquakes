@@ -137,8 +137,8 @@ let torontoHoods = "https://raw.githubusercontent.com/Akshaya-Kamble/Mapping_Ear
 
 // Create a style for the lines.
 let myStyle = {
-  color: "#ffffa1",
-  weight: 2
+  color: "blue",
+  weight: 1
 }
 
 // Grabbing our GeoJSON data.
